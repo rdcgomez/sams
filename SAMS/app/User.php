@@ -16,7 +16,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'id_number', 
+        'role_id', 
+        'username',
+        'name', 
+        'email', 
+        'password',
     ];
 
     /**
@@ -33,7 +38,67 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    // ];
+
+    public function role()
+    {
+        return $this->belongsTo('App\Role');
+    } 
+
+
+
+    
+    public function isStudent(){
+
+      if($this->role->role_name == "student"){
+
+          return true;
+      } 
+      return false;
+      
+    }
+
+    public function isTeacher(){
+
+      if($this->role->role_name == "teacher"){
+
+          return true;
+      } 
+      return false;
+      
+    }
+
+    public function isDO(){
+
+      if($this->role->role_name == "discipline officer"){
+
+          return true;
+      } 
+      return false;
+      
+    }
+
+    public function isGC(){
+
+      if($this->role->role_name == "guidance counselor"){
+
+          return true;
+      } 
+      return false;
+      
+    }
+
+    public function isSE(){
+
+      if($this->role->role_name == "school employee"){
+
+          return true;
+      } 
+      return false;
+      
+    }
+
+
 }

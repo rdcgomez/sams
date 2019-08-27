@@ -20,7 +20,8 @@ class UsersTableSeeder extends Seeder
           'username' => 'student',
           'name' => 'John Doe',
           'email' => 'jdoe@student.apc.edu.ph',
-          'password' => 'password',
+          'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+          'remember_token' => Str::random(10),
         ],
 
         [
@@ -29,7 +30,8 @@ class UsersTableSeeder extends Seeder
           'username' => 'disciplineoofficer',
           'name' => 'John Doe',
           'email' => 'do@student.apc.edu.ph',
-          'password' => 'password',
+          'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+          'remember_token' => Str::random(10),
           
         ],
 
@@ -39,7 +41,8 @@ class UsersTableSeeder extends Seeder
           'username' => 'guidancecounselor',
           'name' => 'John Doe',
           'email' => 'gc@student.apc.edu.ph',
-          'password' => 'password',
+          'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+          'remember_token' => Str::random(10),
           
         ],
   
@@ -49,7 +52,8 @@ class UsersTableSeeder extends Seeder
           'username' => 'teacher',
           'name' => 'John Doe',
           'email' => 'teacher@student.apc.edu.ph',
-          'password' => 'password',
+          'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+          'remember_token' => Str::random(10),
         ],
         [
           'id_number' => '2013-100422',
@@ -57,7 +61,8 @@ class UsersTableSeeder extends Seeder
           'username' => 'schoolemployee',
           'name' => 'John Doe',
           'email' => 'se@student.apc.edu.ph',
-          'password' => 'password',
+          'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+          'remember_token' => Str::random(10),
         ],
       ]);
       

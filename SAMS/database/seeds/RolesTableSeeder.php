@@ -15,24 +15,24 @@ class RolesTableSeeder extends Seeder
       DB::table('roles')->insert([
         
         [
-          'role_name' => 'Student',
+          'role_name' => 'student',
 
         ],
 
         [
-          'role_name' => 'Discipline Officer',
+          'role_name' => 'discipline officer',
         ],
 
         [
-          'role_name' => 'Guidance Counselor',
+          'role_name' => 'guidance counselor',
         ],
   
         [
-          'role_name' => 'Teacher',
+          'role_name' => 'teacher',
         ],
 
         [
-          'role_name' => 'School Employee',
+          'role_name' => 'school employee',
         ],
 
       ]);

@@ -18,3 +18,26 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+Route::group(['middleware' => 'student', 'prefix' => 'st'], function () {
+
+});
+
+Route::group(['middleware' => 'd.o', 'prefix' => 'd.o'], function () {
+
+});
+
+Route::group(['middleware' => 'g.c', 'prefix' => 'g.c'], function () {
+
+});
+
+Route::group(['middleware' => 'teacher', 'prefix' => 'teacher'], function () {
+
+});
+
+Route::group(['middleware' => 's.e', 'prefix' => 's.e'], function () {
+
+});
