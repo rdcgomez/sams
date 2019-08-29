@@ -14,7 +14,11 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                      Welcome to the dashboard <strong> {{Auth::user()->name}} </strong> 
+                      <br>
+                      Student Page: <a href="{{ route('student.index') }}">Dashboard</a>
+                      <br>
+                      Disciplinary Officer Page: <a href="{{ route('do.index') }}">Dashboard</a>
                 </div>
             </div>
         </div>

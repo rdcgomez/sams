@@ -20,7 +20,7 @@ class RolesTableSeeder extends Seeder
         ],
 
         [
-          'role_name' => 'discipline officer',
+          'role_name' => 'disciplinary officer',
         ],
 
         [
@@ -32,7 +32,7 @@ class RolesTableSeeder extends Seeder
         ],
 
         [
-          'role_name' => 'school employee',
+          'role_name' => 'receptionist',
         ],
 
       ]);

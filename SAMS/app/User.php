@@ -47,9 +47,6 @@ class User extends Authenticatable
         return $this->belongsTo('App\Role');
     } 
 
-
-
-    
     public function isStudent(){
 
       if($this->role->role_name == "student"){
@@ -90,9 +87,9 @@ class User extends Authenticatable
       
     }
 
-    public function isSE(){
+    public function isReceptionist(){
 
-      if($this->role->role_name == "school employee"){
+      if($this->role->role_name == "receptionist"){
 
           return true;
       } 
