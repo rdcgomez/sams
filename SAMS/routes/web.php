@@ -22,7 +22,6 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index');
 
-
 Route::middleware('student')->group(function() {
 
   Route::resource('/student', 'StudentsController');
