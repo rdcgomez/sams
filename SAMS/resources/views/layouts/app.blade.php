@@ -16,6 +16,9 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!-- Manifest -->
+    <link rel="manifest" href="{{public_path('mix-manifest.json')}}">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -76,5 +79,21 @@
             @yield('content')
         </main>
     </div>
+
+
+  <script>
+    if ('serviceWorker' in navigator && 'PushManager' in window) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw_sams.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+  </script>
+   
 </body>
 </html>

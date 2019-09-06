@@ -28,6 +28,13 @@ Route::middleware('student')->group(function() {
   
 });
 
+Route::get('qr-code-g', function () {
+  QrCode::size(500)
+            ->format('png')
+            ->generate('ItSolutionStuff.com', public_path('img/qrcode.png'));
+    
+  return view('qrCode');
+});
 // Route::group(['middleware' => 'student', 'prefix' => 'student'], function () {
 
 //   // Route::resource('/student', 'StudentsController');

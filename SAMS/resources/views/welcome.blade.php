@@ -70,7 +70,7 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        {{-- <a href="{{ route('login') }}">Login</a> --}}
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
@@ -83,17 +83,17 @@
                 <div>
                   <img src="{{asset("img/apc.png")}}">
                 </div>
-                <div class="text">Asia Pacific College</div>
+                {{-- <div class="text">Asia Pacific College</div> --}}
                 <div class="title m-b-md">
                     SAMS
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Student</a>
+                <div class="links m-b-md">
+                    <a href="{{ route('login') }}">Student</a>
                     {{-- <a href="https://laracasts.com">Disciplinary-Office</a>
                     <a href="https://laravel-news.com">Guidance</a>
                     <a href="https://blog.laravel.com">Receptionist</a> --}}
-                    <a href="https://nova.laravel.com">Employee</a></li></ul>
+                    <a href="{{ route('login') }}">Employee</a></li></ul>
                   
                 </div>
             </div>
