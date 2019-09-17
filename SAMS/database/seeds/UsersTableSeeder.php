@@ -18,8 +18,8 @@ class UsersTableSeeder extends Seeder
           'id_number' => '2011-100422',
           'role_id' => '1',
           'username' => 'student',
-          'name' => 'Student Name',
-          'email' => 'jdoe@student.apc.edu.ph',
+          'name' => 'Amrik Singh',
+          'email' => 'asingh@student.apc.edu.ph',
           'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
           'remember_token' => Str::random(10),
         ],
@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
         [
           'id_number' => '2013-100222',
           'role_id' => '2',
-          'username' => 'disciplineoofficer',
+          'username' => 'disciplineofficer',
           'name' => 'Raymart Cabiten',
           'email' => 'do@apc.edu.ph',
           'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password

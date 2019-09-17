@@ -49359,15 +49359,39 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/dashboardbootstrap.scss":
+/*!************************************************!*\
+  !*** ./resources/sass/dashboardbootstrap.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/maindashboard.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/maindashboard.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!******************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/dashboardbootstrap.scss ./resources/sass/maindashboard.scss ***!
+  \******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp\htdocs\Laravel\softdev\SAMS\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\Laravel\softdev\SAMS\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Laravel\softdev\SAMS\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Laravel\softdev\SAMS\resources\sass\dashboardbootstrap.scss */"./resources/sass/dashboardbootstrap.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Laravel\softdev\SAMS\resources\sass\maindashboard.scss */"./resources/sass/maindashboard.scss");
 
 
 /***/ })

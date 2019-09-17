@@ -65,7 +65,7 @@ class Kernel extends HttpKernel
         'teacher' => \App\Http\Middleware\Teacher::class,
         'd.o' => \App\Http\Middleware\DisciplinaryOfficer::class,
         'g.c' => \App\Http\Middleware\GuidanceCounselor::class,
-        'receptionist' => \App\Http\Middleware\SchoolEmployee::class,
+        'receptionist' => \App\Http\Middleware\Receptionist::class,
     ];
 
     /**

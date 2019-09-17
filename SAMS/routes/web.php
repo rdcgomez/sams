@@ -16,15 +16,41 @@
 
 Route::get('/', function () {
   return view('welcome');
-});
+})->name('root');
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
+
+
 
 Route::middleware('student')->group(function() {
 
   Route::resource('/student', 'StudentsController');
+  
+});
+
+Route::middleware('d.o')->group(function() {
+
+  Route::resource('/do', 'DisciplinaryOfficersController');;
+  
+});
+
+Route::middleware('g.c')->group(function() {
+
+  Route::resource('/gc', 'GuidanceCounselorsController');;
+  
+});
+
+Route::middleware('teacher')->group(function() {
+
+  Route::resource('/teacher', 'TeachersController');;
+  
+});
+
+Route::middleware('receptionist')->group(function() {
+
+  Route::resource('/receptionist', 'ReceptionistsController');;
   
 });
 
@@ -35,32 +61,5 @@ Route::get('qr-code-g', function () {
     
   return view('qrCode');
 });
-// Route::group(['middleware' => 'student', 'prefix' => 'student'], function () {
 
-//   // Route::resource('/student', 'StudentsController');
-//   return "working middleware";
-// });
 
-Route::group(['middleware' => 'd.o', 'prefix' => 'd.o'], function () {
-
-  Route::resource('/do', 'DisciplinaryOfficersController');
-
-});
-
-// Route::group(['middleware' => 'g.c', 'prefix' => 'g.c'], function () {
-
-//   Route::resource('/home', 'GuidanceCounselorsController')->name('gc');
-
-// });
-
-// Route::group(['middleware' => 'teacher', 'prefix' => 'teacher'], function () {
-
-//   Route::resource('/home', 'TeachersController')->name('teacher');
-
-// });
-
-// Route::group(['middleware' => 'receptionist', 'prefix' => 'receptionist'], function () {
-
-//   Route::resource('/home', 'ReceptionistsController')->name('receptionist');
-
-// });

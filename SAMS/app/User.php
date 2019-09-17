@@ -69,7 +69,7 @@ class User extends Authenticatable
 
     public function isDO(){
 
-      if($this->role->role_name == "discipline officer"){
+      if($this->role->role_name == "disciplinary officer"){
 
           return true;
       } 

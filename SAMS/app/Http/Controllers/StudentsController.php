@@ -14,8 +14,7 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        return view('/student/index');
-        
+        return view('student.index');
     }
 
     /**
@@ -47,7 +46,7 @@ class StudentsController extends Controller
      */
     public function show($id)
     {
-        //
+      return $id . " show method working";
     }
 
     /**

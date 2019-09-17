@@ -13,7 +13,7 @@ class DisciplinaryOfficersController extends Controller
      */
     public function index()
     {
-        return view('/disciplinary officer/index');
+        return view('do.index');
     }
 
     /**

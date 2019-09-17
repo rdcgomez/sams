@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -25,8 +26,28 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // protected $redirectTo = '/home';
 
+    protected function redirectTo()
+    {
+        if(Auth::user()->isStudent()) {
+          return route('student.index');
+        }
+        elseif(Auth::user()->isDO()) {
+          return route('do.index');
+        }
+        elseif(Auth::user()->isGC()) {
+          return route('gc.index');
+        }
+        elseif(Auth::user()->isTeacher()) {
+          return route('teacher.index');
+        }
+        elseif(Auth::user()->isReceptionist()) {
+          return route('receptionist.index');
+        }
+
+       
+    }
     /**
      * Create a new controller instance.
      *
@@ -37,11 +58,8 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    // public function username()
-    // { 
-    //   $login = request()->input('login');
-    //   $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-    //   request()->merge([$field => $login]);
-    //   return $field;
-    // }
+    public function username()
+    {
+    return 'username';
+    }
 }

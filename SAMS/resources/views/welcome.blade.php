@@ -67,15 +67,9 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        {{-- <a href="{{ route('login') }}">Login</a> --}}
-
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
-                    @endauth
                 </div>
             @endif
 
@@ -83,17 +77,20 @@
                 <div>
                   <img src="{{asset("img/apc.png")}}">
                 </div>
-                {{-- <div class="text">Asia Pacific College</div> --}}
                 <div class="title m-b-md">
                     SAMS
                 </div>
 
                 <div class="links m-b-md">
-                    <a href="{{ route('login') }}">Student</a>
+                  @guest
+                    <a href="{{ route('login') }}">Sign In</a>
+                  @else
+                    <a href="{{ url()->previous() }}">Dashboard</a>
+                  @endguest
                     {{-- <a href="https://laracasts.com">Disciplinary-Office</a>
                     <a href="https://laravel-news.com">Guidance</a>
                     <a href="https://blog.laravel.com">Receptionist</a> --}}
-                    <a href="{{ route('login') }}">Employee</a></li></ul>
+                    {{-- <a href="{{ route('login') }}">Employee</a></li></ul> --}}
                   
                 </div>
             </div>

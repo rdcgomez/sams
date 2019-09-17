@@ -13,7 +13,7 @@ class GuidanceCounselorsController extends Controller
      */
     public function index()
     {
-        //
+        return view("gc.index");
     }
 
     /**
