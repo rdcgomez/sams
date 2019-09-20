@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class ReceptionistsController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +15,7 @@ class ReceptionistsController extends Controller
      */
     public function index()
     {
-        return view("receptionist.index");
+        return view("receptionist.index" );
     }
 
     /**
@@ -23,7 +25,7 @@ class ReceptionistsController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -34,7 +36,7 @@ class ReceptionistsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
     }
 
     /**
@@ -43,9 +45,11 @@ class ReceptionistsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+      $users= User::all();
+    
+      return view('/receptionist/show', compact('users') );
     }
 
     /**
@@ -80,5 +84,11 @@ class ReceptionistsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function list()
+    {
+     
+
     }
 }

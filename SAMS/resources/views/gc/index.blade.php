@@ -14,6 +14,6 @@
 
 @section('content')
 
-  <div>Welcome {{Auth::user()->name}} to the Dashboard!</div>
+  <div><h2><center>Welcome {{Auth::user()->name}}!</center></h2></div>
 
 @endsection

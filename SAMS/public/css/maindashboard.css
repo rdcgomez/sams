@@ -36,33 +36,50 @@ body {
 #main {
   background-image: url(/images/background.png?aa256042bb39e3511f00205dc312a021);
   background-position: center;
-  height: 100%;
+  min-height: 100vh;
 }
 
-.search-container {
+.search {
   width: 100%;
+  position: relative;
+  display: flex;
 }
 
-.search-container input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: 1px;
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
 }
 
-.search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 8px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
+.searchTerm:focus {
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 38px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
   cursor: pointer;
+  font-size: 20px;
 }
 
-.search-container button:hover {
-  background: #000000;
+/*Resize the wrap to see the search bar change!*/
+
+.wrap {
+  display: flex;
+  min-width: 20%;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 768px) {

@@ -16,9 +16,16 @@
 
                       Welcome to the dashboard <strong> {{Auth::user()->name}} </strong> 
                       <br>
-                      Student Page: <a href="{{ route('student.index') }}">Dashboard</a>
+                      Students Page: <a href="{{ route('student.index') }}">Dashboard</a>
                       <br>
-                      Disciplinary Officer Page: <a href="{{ route('do.index') }}">Dashboard</a>
+                      Disciplinary Officers Page: <a href="{{ route('do.index') }}">Dashboard</a>
+                      <br>
+                      Guidance Counselors Page: <a href="{{ route('gc.index') }}">Dashboard</a>
+                      <br>
+                      Teachers Page: <a href="{{ route('teacher.index') }}">Dashboard</a>
+                      <br>
+                      Receptionist Page: <a href="{{ route('receptionist.index') }}">Dashboard</a>
+                      <br>
                 </div>
             </div>
         </div>

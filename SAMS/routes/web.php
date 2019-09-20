@@ -32,25 +32,27 @@ Route::middleware('student')->group(function() {
 
 Route::middleware('d.o')->group(function() {
 
-  Route::resource('/do', 'DisciplinaryOfficersController');;
+  Route::resource('/do', 'DisciplinaryOfficersController');
   
 });
 
 Route::middleware('g.c')->group(function() {
 
-  Route::resource('/gc', 'GuidanceCounselorsController');;
+  Route::resource('/gc', 'GuidanceCounselorsController');
   
 });
 
 Route::middleware('teacher')->group(function() {
 
-  Route::resource('/teacher', 'TeachersController');;
+  Route::resource('/teacher', 'TeachersController');
   
 });
 
 Route::middleware('receptionist')->group(function() {
 
-  Route::resource('/receptionist', 'ReceptionistsController');;
+  Route::resource('/receptionist', 'ReceptionistsController');
+  
+  Route::get('/receptionist/show', 'ReceptionistsController@list')->name('receptionist.list'); 
   
 });
 
@@ -60,6 +62,6 @@ Route::get('qr-code-g', function () {
             ->generate('ItSolutionStuff.com', public_path('img/qrcode.png'));
     
   return view('qrCode');
-});
+})->name('scan.qr');
 
 

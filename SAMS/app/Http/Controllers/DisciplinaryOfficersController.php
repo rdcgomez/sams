@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class DisciplinaryOfficersController extends Controller
@@ -45,7 +46,9 @@ class DisciplinaryOfficersController extends Controller
      */
     public function show($id)
     {
-        //
+      $users= User::all();
+    
+      return view('/do/show', compact('users') );
     }
 
     /**
