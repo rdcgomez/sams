@@ -35,7 +35,7 @@
           </button>
                   {{-- Search Bar --}}
   {!! Form::open (['method' => 'get',	
-  'action' => ['DisciplinaryOfficersController@show', 'User->id'] ])    !!}	
+                    'action' => ['DisciplinaryOfficersController@show', 'User->id'] ])    !!}	
 
     <div class="wrap">
       <div class="search">
